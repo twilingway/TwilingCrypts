@@ -73,8 +73,6 @@ export class TelegramService extends Telegraf<Context> {
   @Start()
   async startCommand(@Ctx() ctx: Context) {
     ctx.telegram.setMyCommands(commands);
-    console.log('ctx :>> ', ctx);
-    console.log('from :>> ', ctx.message.from);
     this.updateStatus(ctx.message.from);
 
     await ctx.reply(
@@ -108,7 +106,7 @@ export class TelegramService extends Telegraf<Context> {
         });
       });
     }
-    if (mes === '/help' || mes === '/help@TwilingCrypts_bot') {
+    if (mes === '/help' || mes === '/help@twilingcrypts_bot') {
       const answer =
         'Write short name of the currency. \n' +
         '<b>!BTC, !ETH, !TON</b> so on.\n' +
@@ -143,7 +141,7 @@ export class TelegramService extends Telegraf<Context> {
     }
     if (
       mes.toLowerCase() === '/index' ||
-      mes.toLowerCase() === '/index@TwilingCrypts_bot'
+      mes.toLowerCase() === '/index@twilingcrypts_bot'
     ) {
       let answer = '<b>Coin       Price                 24h%</b>\n';
 
