@@ -1,0 +1,10 @@
+Important endpoints:
+
+To set webhook –
+https://api.telegram.org/bot<bot_token>/setWebhook?url=<webhook_url>&drop_pending_updates=true
+
+To delete webhook –
+https://api.telegram.org/bot{bot_token}/deleteWebhook
+
+Get webhook information –
+https://api.telegram.org/bot{bot_token}/getWebhookInfo
