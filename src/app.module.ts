@@ -11,7 +11,7 @@ import { TasksModule } from './tasks/tasks.module';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
+      rootPath: join(__dirname, '..', 'client'),
       exclude: ['/api/(.*)'],
     }),
     ConfigModule.forRoot({ isGlobal: true }),

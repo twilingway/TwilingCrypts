@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  node:
+    container_name: twilingway-twiling-crypts-bot
+    build: .
+    image: twilingway/twiling-crypts-bot
+    env_file:
+      - .env
+    ports:
+      - 3030:3030
+      - 5858:5858

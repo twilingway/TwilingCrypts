@@ -12,7 +12,7 @@ const telegrafModuleOptions = (
 
     launchOptions: {
       webhook: {
-        domain: 'https://frequency-english-bot.twiling.ru',
+        domain: configService.get('TELEGRAM_WEBHOOK_DOMAIN'),
         hookPath: '/bot',
       },
     },
